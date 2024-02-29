@@ -59,7 +59,7 @@ int main(int argc, char ** argv)
         }
     }
 
-    while(lab->maz[p.k][p.w] != 3)
+    while(lab->maz[p.k][p.w] != 6)
     {
         if(lab->maz[p.k][p.w] == 1)
         {
