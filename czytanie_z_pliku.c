@@ -34,7 +34,7 @@ maze* returnmaze(FILE* plik) //nalzey podac otwarty do czytania plik "r"
                 break;
 
                 case 'K':
-                dane->maz[i][dane->m] = 3;
+                dane->maz[i][dane->m] = 6;
                 dane->n = i; // to nie dziala kiedy K nie jest w dolnym prawym roku labiryntu !!!
                 i++;
                 break;
