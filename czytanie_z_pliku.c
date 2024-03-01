@@ -2,7 +2,7 @@
 
 maze* returnmaze(FILE* plik) //nalzey podac otwarty do czytania plik "r"
 {
-    maze * dane = malloc(sizeof *dane);
+    maze* dane = malloc(sizeof *dane);
 
     int tmp= 0;
     int i = 0;
