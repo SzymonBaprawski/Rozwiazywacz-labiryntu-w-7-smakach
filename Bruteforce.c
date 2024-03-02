@@ -196,7 +196,6 @@ int main(int argc, char ** argv)
                     forward(p.kierunek);
                 }
             }else if(kod[1] == 1 && kod[3] == 1){
-              //  printf(" tu %d\n", p.kierunek);
                 forward(p.kierunek);
             }else {
                 if(p.kierunek == 3){
@@ -205,7 +204,6 @@ int main(int argc, char ** argv)
                 }else{
                     turnL();
                     forward(p.kierunek);
-                 //   printf("tu %d %d %d" ,p.kierunek, p.f, suma);
                 }
             }
         }else if(suma == 1)//nood
