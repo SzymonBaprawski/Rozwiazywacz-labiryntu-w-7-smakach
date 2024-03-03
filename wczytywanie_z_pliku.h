@@ -11,4 +11,8 @@ void wczytaj_z_pliku (char *nazwa_pliku, int szerokosc, int wysokosc, int **tabl
 
 void wypisz_tablice (int szerokosc, int wysokosc, int **tablica);
 
+void znajdz_start (int szerokosc, int wysokosc, int **tablica, int *x_start, int *y_start);
+
+void znajdz_koniec (int szerokosc, int wysokosc, int **tablica, int *x_koniec, int *y_koniec);
+
 #endif // WCZYTANIE_Z_PLIKU_H
