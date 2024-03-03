@@ -31,7 +31,6 @@ void follower (int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_k
     }
 
     printf("Kierunek początkowy to %c\n", kierunek);
-    
 
     while (x!=x_koniec || y!=y_koniec){
         //printf("Kierunek: %c, x: %d, y: %d\n", kierunek, x, y);
@@ -172,7 +171,7 @@ int main (int argc, char *argv[]){
     int szerokosc = sprawdz_szerokosc(argv[1]);
     int wysokosc = sprawdz_wysokosc(argv[1]);
 
-    printf("Szerokość: %d\nWysokość: %d\n", szerokosc, wysokosc);
+    //printf("Szerokość: %d\nWysokość: %d\n", szerokosc, wysokosc);
 
     //deklaracja tablicy
     int **tablica;
@@ -180,7 +179,6 @@ int main (int argc, char *argv[]){
 
     wczytaj_z_pliku(argv[1], szerokosc, wysokosc, tablica);
     //wypisz_tablice(szerokosc, wysokosc, tablica);
-
 
     char kierunek = ' '; // N E W S
     int x = 0;
@@ -192,13 +190,11 @@ int main (int argc, char *argv[]){
     znajdz_start(szerokosc, wysokosc, tablica, &x, &y);
     znajdz_koniec(szerokosc, wysokosc, tablica, &x_koniec, &y_koniec);
 
-    printf("Start: %d %d\nKoniec: %d %d\n", x, y, x_koniec, y_koniec);
+    //printf("Start: %d %d\nKoniec: %d %d\n", x, y, x_koniec, y_koniec);
 
     //wypisz_tablice(szerokosc, wysokosc, tablica);
 
     follower(tablica, szerokosc, wysokosc, x_koniec, y_koniec, kierunek, x, y);
-
-
 
     return 0;
 }
