@@ -6,6 +6,30 @@ void follower (int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_k
     int liczba_krokow = 0;
 
     kierunek = 'E';
+
+    if (x == 0){
+        kierunek = 'E';
+    } else if (y == 0){
+        kierunek = 'S';
+    } else if (x == szerokosc-1){
+        kierunek = 'W';
+    } else if (y == wysokosc-1){
+        kierunek = 'N';
+    } else{
+        //sprawdzenie z której strony jest wolne pole
+        if (tablica[x+1][y] != 1){
+            kierunek = 'E';
+        } else if (tablica[x-1][y] != 1){
+            kierunek = 'W';
+        } else if (tablica[x][y+1] != 1){
+            kierunek = 'S';
+        } else if (tablica[x][y-1] != 1){
+            kierunek = 'N';
+        } else {
+            printf("Ups, coś poszło nie tak\n");
+        }
+    }
+
     printf("Kierunek początkowy to %c\n", kierunek);
     
 
@@ -70,7 +94,7 @@ void follower (int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_k
                 kierunek = 'W';
                 x--;
                 liczba_krokow = 1;
-            } else if (y < wysokosc && tablica[x][y-1] != 1){
+            } else if (y > 0 && tablica[x][y-1] != 1){
                 y--;
                 liczba_krokow++;
             } else if (x < szerokosc && tablica[x+1][y] != 1){
@@ -97,7 +121,7 @@ void follower (int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_k
                 kierunek = 'E';
                 x++;
                 liczba_krokow = 1;
-            } else if (y > 0 && tablica[x][y+1] != 1){
+            } else if (y < szerokosc && tablica[x][y+1] != 1){
                 y++;
                 liczba_krokow++;
             } else if (x > 0 && tablica[x-1][y] != 1){
@@ -148,7 +172,7 @@ int main (int argc, char *argv[]){
     int szerokosc = sprawdz_szerokosc(argv[1]);
     int wysokosc = sprawdz_wysokosc(argv[1]);
 
-    //printf("Szerokość: %d\nWysokość: %d\n", szerokosc, wysokosc);
+    printf("Szerokość: %d\nWysokość: %d\n", szerokosc, wysokosc);
 
     //deklaracja tablicy
     int **tablica;
@@ -168,7 +192,7 @@ int main (int argc, char *argv[]){
     znajdz_start(szerokosc, wysokosc, tablica, &x, &y);
     znajdz_koniec(szerokosc, wysokosc, tablica, &x_koniec, &y_koniec);
 
-    //printf("Start: %d %d\nKoniec: %d %d\n", x, y, x_koniec, y_koniec);
+    printf("Start: %d %d\nKoniec: %d %d\n", x, y, x_koniec, y_koniec);
 
     //wypisz_tablice(szerokosc, wysokosc, tablica);
 

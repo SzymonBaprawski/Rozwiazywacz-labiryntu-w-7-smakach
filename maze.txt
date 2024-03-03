@@ -1,5 +1,9 @@
-XXXXX
-P   X
-X XXX
-X   K
-XXXXX
+XXXXXXXXX
+X      PX
+X X XXXXX
+X X X   X
+X XXX X X
+X     X X
+X XXXXX X
+X XK    X
+XXXXXXXXX
