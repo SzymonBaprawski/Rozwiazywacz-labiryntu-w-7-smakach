@@ -355,6 +355,20 @@ int main(int argc, char ** argv)
             turnR();
             forward(p.kierunek);
       
+        } else if (suma == 0)
+        {
+            int r = rand() % 3 + 1;
+
+                if(r==1){
+                    turnL();
+                    forward(p.kierunek);
+                }else if(r == 2){
+                    forward(p.kierunek);
+                }else{
+                    turnR();
+                    forward(p.kierunek);
+                }
+            
         }
         
 

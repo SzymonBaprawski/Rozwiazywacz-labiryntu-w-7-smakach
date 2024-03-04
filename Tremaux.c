@@ -180,7 +180,7 @@ int main(int argc, char ** argv)
         }
 
         if(wnod > 0){
-         if(suma != 1)
+         if(suma == 2 || suma == 3)
             {
                 if(ozna[p.k][p.w] == 1)
                 {
@@ -209,6 +209,9 @@ int main(int argc, char ** argv)
                     lab->maz[p.k][p.w] = 1;
                 } co sie dzieje miedzy 3 a 4 przejsciami przez nodd*/ 
             }
+
+            
+    
         }
 
         if(suma == 2)// korytaz
@@ -405,7 +408,6 @@ int main(int argc, char ** argv)
             }
 
             int tmpk = p.kierunek;
-                printf("%d, %d \n", tmpi, tmpk);
             switch(tmpk){
 
                 case 0:
@@ -506,6 +508,9 @@ int main(int argc, char ** argv)
             }
         
 
+        }else 
+        {
+            forward(p.kierunek);
         }
     }
     
