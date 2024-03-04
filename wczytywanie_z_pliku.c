@@ -76,7 +76,7 @@ void wczytaj_z_pliku(char *nazwa_pliku, int szerokosc, int wysokosc, int **tabli
 void wypisz_tablice(int szerokosc, int wysokosc, int **tablica){
     for (int i = 0; i < wysokosc; i++){
         for (int j = 0; j < szerokosc; j++){
-            printf("% d", tablica[j][i]);
+            printf("%d", tablica[j][i]);
         }
         printf("\n");
     }
