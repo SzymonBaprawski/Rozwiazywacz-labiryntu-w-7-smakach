@@ -229,7 +229,7 @@ int main (int argc, char *argv[]){
     //getchar();
     flood(tablica, szerokosc, wysokosc);
     //getchar();
-    wypisz_tablice(szerokosc, wysokosc, tablica);
+    //wypisz_tablice(szerokosc, wysokosc, tablica);
     //getchar();
 
     follower(tablica, szerokosc, wysokosc, x_koniec, y_koniec, x, y);
