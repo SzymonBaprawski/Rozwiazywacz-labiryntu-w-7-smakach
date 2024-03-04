@@ -18,7 +18,7 @@ tremaux:
 	gcc $(CFLAGS) Tremaux.c -o tremaux.out
 
 bellmanford:
-	gcc $(CFLAGS) Bellmanford.c wczytywanie_z_pliku.c -o bellmanford.out
+	gcc $(CFLAGS) Bellman-ford.c wczytywanie_z_pliku.c -o bellmanford.out
 
 wallfollower:
 	gcc $(CFLAGS) Wall-follower.c wczytywanie_z_pliku.c -o wallfollower.out
