@@ -24,11 +24,13 @@ typedef struct stos {
     int *trasa;
     int ile; // nw czy jest set na zero xd
     struct stos * next;
-} stos;
+} stos_type;
 
-int pop(stos **top);
+void pop(stos_type **top);
 
-int push(stos**top, int k, int w, int kierunek, int* trasa);
+void push(stos_type **top, int k, int w, int kierunek, int* trasa);
+
+void daj(stos_type *top);
 
 //trzy
 
