@@ -3,7 +3,7 @@ CFLAGS = -Wall
 all: bfs dfs def bruteforce tremaux bellmanford wallfollower
 
 bfs:
-	gcc $(CFLAGS) BFS.c -o bfs.out
+	gcc $(CFLAGS) BFS.c wczytywanie_z_pliku.c -o bfs.out
 
 dfs:
 	gcc $(CFLAGS) DFS.c -o dfs.out
