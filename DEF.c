@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "wczytywanie_z_pliku.h"
 
-void follower (int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_koniec, char kierunek, int x, int y){
+void follower (int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_koniec, int x, int y){
     int liczba_krokow = 0;
 
-    kierunek = 'E';
+    char kierunek = 'E';
 
     if (x == 0){
         kierunek = 'E';
@@ -120,7 +120,7 @@ void follower (int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_k
                 kierunek = 'E';
                 x++;
                 liczba_krokow = 1;
-            } else if (y < szerokosc && tablica[x][y+1] != 1){
+            } else if (y < wysokosc && tablica[x][y+1] != 1){
                 y++;
                 liczba_krokow++;
             } else if (x > 0 && tablica[x-1][y] != 1){
@@ -214,7 +214,6 @@ int main (int argc, char *argv[]){
     wczytaj_z_pliku(argv[1], szerokosc, wysokosc, tablica);
     //wypisz_tablice(szerokosc, wysokosc, tablica);
 
-    char kierunek = ' '; // N E W S
     int x = 0;
     int y = 0;
     int x_koniec = 0;
@@ -226,13 +225,14 @@ int main (int argc, char *argv[]){
 
     //printf("Start: %d %d\nKoniec: %d %d\n", x, y, x_koniec, y_koniec);
 
-    //wypisz_tablice(szerokosc, wysokosc, tablica);
+   // wypisz_tablice(szerokosc, wysokosc, tablica);
+    //getchar();
     flood(tablica, szerokosc, wysokosc);
-
+    //getchar();
     //wypisz_tablice(szerokosc, wysokosc, tablica);
     //getchar();
 
-    follower(tablica, szerokosc, wysokosc, x_koniec, y_koniec, kierunek, x, y);
+    follower(tablica, szerokosc, wysokosc, x_koniec, y_koniec, x, y);
 
     return 0;
 }
