@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "wczytywanie_z_pliku.h"
+#include <time.h>
 
 void follower (int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_koniec, int x, int y){
     int liczba_krokow = 0;
@@ -189,6 +190,8 @@ void flood(int **tablica, int szerokosc, int wysokosc){
 
 int main (int argc, char *argv[]){
 
+    clock_t start = clock();
+
     if (argc != 2){
         printf("Niepoprawna liczba argumentów\n");
         return 1;
@@ -233,6 +236,11 @@ int main (int argc, char *argv[]){
     //getchar();
 
     follower(tablica, szerokosc, wysokosc, x_koniec, y_koniec, x, y);
+
+    clock_t koniec = clock();
+    double czas = (double)(koniec - start) / CLOCKS_PER_SEC;
+    printf("Czas wykonywania: %f\n", czas);
+
 
     return 0;
 }

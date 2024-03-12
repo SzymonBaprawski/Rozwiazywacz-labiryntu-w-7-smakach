@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include "wczytywanie_z_pliku.h"
+#include <time.h>
 
 void oznaczanie_pol (int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_koniec, int x, int y){
     tablica[x][y] = 10;
@@ -223,6 +224,9 @@ void znajdz_sciezke (int **tablica, int szerokosc, int wysokosc, int x_koniec, i
 
 
 int main (int argc, char *argv[]){
+    
+    clock_t start = clock();
+
 
     if (argc != 2){
         printf("Niepoprawna liczba argumentów\n");
@@ -269,6 +273,11 @@ int main (int argc, char *argv[]){
 
     //wypisz_tablice(szerokosc, wysokosc, tablica);
     //getchar();
+
+    clock_t koniec = clock();
+    double czas = (double)(koniec - start) / CLOCKS_PER_SEC;
+    printf("Czas wykonywania: %f\n", czas);
+
 
 
     return 0;
