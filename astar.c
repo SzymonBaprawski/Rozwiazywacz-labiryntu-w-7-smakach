@@ -2,13 +2,11 @@
 #include <stdlib.h>
 #include "wczytywanie_z_pliku.h"
 #include <time.h>
-
-void astar(int **tablica, int szerokosc, int wysokosc, int x_koniec, int y_koniec, int x, int y){
-    //rozwiązanie labiryntu za pomocą A*
-    
+#include <math.h>
 
 
-}
+
+
 
 int main (int argc, char *argv[]){
 
@@ -51,9 +49,7 @@ int main (int argc, char *argv[]){
 
     //printf("Start: %d %d\nKoniec: %d %d\n", x, y, x_koniec, y_koniec);
 
-    //wypisz_tablice(szerokosc, wysokosc, tablica);
-
-    follower(tablica, szerokosc, wysokosc, x_koniec, y_koniec, x, y);
+    wypisz_tablice(szerokosc, wysokosc, tablica);
 
     clock_t koniec = clock();
     double czas = (double)(koniec - start) / CLOCKS_PER_SEC;
