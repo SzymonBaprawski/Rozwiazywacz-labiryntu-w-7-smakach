@@ -1,6 +1,6 @@
 CFLAGS = -Wall
 
-all: bfs def bellmanford wallfollower
+all: bfs def bellmanford wallfollower astar
 
 bfs:
 	gcc $(CFLAGS) BFS.c wczytywanie_z_pliku.c -o bfs.out
@@ -15,7 +15,7 @@ wallfollower:
 	gcc $(CFLAGS) Wall-follower.c wczytywanie_z_pliku.c -o wallfollower.out
 
 astar:
-	gcc $(CFLAGS) astar.c wczytywanie_z_pliku.c -o astar.out
+	gcc $(CFLAGS) astar.c wczytywanie_z_pliku.c -o astar.out -lm
 
 clean:
 	rm -f bfs.out dfs.out def.out bruteforce.out tremaux.out bellmanford.out wallfollower.out astar.out
