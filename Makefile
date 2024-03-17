@@ -1,10 +1,13 @@
 CFLAGS = -Wall
 
-all: bfs def bellmanford wallfollower astar
+all: bfs def bellmanford wallfollower astar bfsopt
 
 bfs:
 	gcc $(CFLAGS) BFS.c wczytywanie_z_pliku.c -o bfs.out
 
+bfsopt:
+	gcc $(CFLAGS) BFSoptymalizowany.c wczytywanie_z_pliku.c -o bfsopt.out
+	
 def:
 	gcc $(CFLAGS) DEF.c wczytywanie_z_pliku.c -o def.out
 

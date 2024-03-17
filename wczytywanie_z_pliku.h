@@ -15,4 +15,6 @@ void znajdz_start (int szerokosc, int wysokosc, int **tablica, int *x_start, int
 
 void znajdz_koniec (int szerokosc, int wysokosc, int **tablica, int *x_koniec, int *y_koniec);
 
+void rozszerz_pamiec (int szerokosc, int wysokosc, int ***tablica);
+
 #endif // WCZYTANIE_Z_PLIKU_H

@@ -44,6 +44,24 @@ void alokuj_pamiec(int szerokosc, int wysokosc, int ***tablica){
     }
 }
 
+void zwolnij_pamiec(int szerokosc, int **tablica){
+    for (int i = 0; i < szerokosc; i++){
+        free(tablica[i]);
+    }
+    free(tablica);
+}
+
+void rozszerz_pamiec(int szerokosc, int wysokosc, int ***tablica){
+    printf("Rozszerzam pamięć\n");
+    *tablica = (int**)realloc(*tablica, szerokosc * sizeof(int*));
+    for (int i = 0; i < szerokosc; i++){
+        (*tablica)[i] = (int*)realloc((*tablica)[i], wysokosc * sizeof(int));
+    }
+    printf("Pamięć została rozszerzona\n");
+    *tablica[szerokosc][0] = 0;
+    *tablica[szerokosc][1] = 0;
+}
+
 void wczytaj_z_pliku(char *nazwa_pliku, int szerokosc, int wysokosc, int **tablica){
     FILE *plik = fopen(nazwa_pliku, "r");
     if (plik == NULL){
